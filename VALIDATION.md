@@ -62,7 +62,12 @@ implementation, preserving option IDs and defaults. Descriptions are concise.
 No assets, diagnostics, tests or test-only
 Python dependencies are packaged. This is a local candidate, not a release.
 
-Still pending: fixed-default native launch, save/load acceptance, native Extreme
-and independent review. User-driven slider persistence and the requested audible
-restart comparison have passed as described above.
+Native save/load also passed: a Castle Builder settlement was saved through the
+normal UI as audio.sav and loaded again; mixer values remained 10/11/30 and sample
+master11. The user marked the restart test successful and explicitly requested
+no additional audio testing. Extra compatibility runs are therefore not pursued.
+
+Limits: the default path is verified by original assembly, signature matching and
+emitted-code execution, without a separate fixed-default native run. Extreme has
+signature coverage but no native game acceptance. Independent review remains.
 No multiplayer/replay compatibility claim is made from these tests.
