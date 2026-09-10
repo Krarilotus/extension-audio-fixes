@@ -1,11 +1,10 @@
 # Audio Fixes
 
-Focused UCP3 audio corrections using the game's existing volume sliders and
-audio facilities. This repository is the shared module home for startup SFX
-volume (R013), Bink video volume (R012), and a bounded investigation of viewport
-sound attenuation (R011). Each correction is reviewed separately.
+Corrects startup sound-effects volume using the existing FX slider.
 
-Implementation and native acceptance are in progress. No release is available.
-Faithful original-game reconstruction belongs in
-[OpenSHC](https://github.com/sourcehold/OpenSHC); intentional behavior changes
-belong here.
+Enable `startup-sfx-volume` and restart the game. The option defaults to off.
+Module text is available in all nine UCP launcher languages.
+
+Install the runtime files and `locale` folder in `ucp/modules/audio-fixes-0.1.0`.
+See [validation](VALIDATION.md) for tested behavior and compatibility limits.
+No release has been published.

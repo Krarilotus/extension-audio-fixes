@@ -1,0 +1,11 @@
+meta:
+  version: 1.0.0
+options:
+  - name: startup_sfx_volume
+    category: ['{{audio_fixes}}']
+    text: '{{startup_text}}'
+    description: '{{startup_description}}'
+    display: Switch
+    url: audio-fixes.startup-sfx-volume
+    contents:
+      value: false

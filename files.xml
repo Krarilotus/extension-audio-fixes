@@ -1,0 +1,8 @@
+<module>
+  <files>
+    <file src="definition.yml" />
+    <file src="options.yml" />
+    <file src="*.lua" />
+    <file src="locale" />
+  </files>
+</module>
