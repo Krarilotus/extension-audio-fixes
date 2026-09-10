@@ -15,3 +15,7 @@ for actual checks and remaining acceptance.
 Faithful original-game reconstruction belongs in
 [OpenSHC](https://github.com/sourcehold/OpenSHC); intentional behavior changes
 belong here.
+
+The `video-fx-volume` option makes Bink videos use the existing FX slider at
+startup and during playback while retaining each clip's relative gain. It also
+defaults to off and requires a restart. See [video validation](VALIDATION-R012.md).

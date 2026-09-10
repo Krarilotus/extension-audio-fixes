@@ -8,3 +8,10 @@ options:
     url: audio-fixes.startup-sfx-volume
     contents:
       value: false
+  - name: video_fx_volume
+    text: Apply FX volume to videos
+    description: Use the existing FX slider for video sound, including during playback.
+    display: Switch
+    url: audio-fixes.video-fx-volume
+    contents:
+      value: false
