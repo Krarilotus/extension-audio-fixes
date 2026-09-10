@@ -48,7 +48,8 @@ woodcutter slot played: gains 2400/4800/7200/9600. Music=37 and speech=83 remain
 unchanged. The native sample path simultaneously used R013's saved FX correction.
 No native error was logged. Video frame/synchronization timing was not benchmarked.
 
-Automated: 33 new tests, 51 including R013, pass under Python/pytest. Lua's actual
+Automated: 33 video tests, 73 including the expanded R013 checks, pass under
+Python/pytest. Lua's actual
 assembly strings are assembled and executed in Unicorn with a stdcall API stub.
 Checks include two live slots, startup/live mute/mid/full, per-file gain, closed
 and reused handles, sound disabled, no video, corrupt FX values, preserved
@@ -56,10 +57,12 @@ registers/flags/stack. Keystone is a test-only assembler; native UCP uses FASM.
 
 Cost: three event hooks, 16 bytes persistent state, no per-frame/per-sound polling,
 no new runtime dependency. At most two extra BinkSetVolume calls per FX setter
-event. The emulation assembler produced 34/55/105-byte trampolines (194 total);
-native FASM sizes and allocator page costs still need direct measurement.
-Five runtime files total 4,215 bytes; deterministic candidate ZIP is 2,394 bytes,
-an increase of 2,666 source bytes / 1,119 ZIP bytes over R013. No tests, diagnostic
+event. Both emulation and a read-only inspection of the actual installed native
+FASM code confirm 34/55/105-byte trampolines (194 total). The allocations share
+the core allocator's code area; allocator page accounting is not yet measured.
+Runtime files including all nine locales total 8,428 bytes; the candidate ZIP is
+6,908 bytes before the shared startup-code cleanup is incorporated. All labels
+resolve through the launcher's actual translation function. No tests, diagnostic
 code, Python dependencies or assets are packaged. No release was published.
 
 Remaining acceptance: native Extreme, natural AI/building trigger and timing,

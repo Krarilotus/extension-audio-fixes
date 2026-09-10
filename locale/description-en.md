@@ -1,2 +1,1 @@
-Fixes audio behavior using the existing in-game sliders. Enable individual
-corrections in the options. Restart the game after changing these options.
+Fixes startup sound-effects volume and video volume. Uses the existing FX slider.
