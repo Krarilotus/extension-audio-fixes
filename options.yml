@@ -1,0 +1,10 @@
+meta:
+  version: 1.0.0
+options:
+  - name: startup_sfx_volume
+    text: Apply saved FX volume at startup
+    description: Use the saved FX slider value for sound effects from startup.
+    display: Switch
+    url: audio-fixes.startup-sfx-volume
+    contents:
+      value: false
