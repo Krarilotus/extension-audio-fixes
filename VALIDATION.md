@@ -56,8 +56,9 @@ Allocation/page overhead comes from the existing UCP core allocator. Native
 wall-clock startup deltas are not yet measured; modal acknowledgement and capture
 timing must not be presented as patch overhead.
 
-Package measurement will be refreshed for this default-path revision. The prior
-saved-only candidate contained four runtime files, 1,549 bytes / 1,275 ZIP bytes.
+Package measurement including all nine launcher locales: 4,227 bytes / 5,251 ZIP
+bytes. Localized labels resolve through the launcher's actual `changeLocale`
+implementation, preserving option IDs and defaults. Descriptions are concise.
 No assets, diagnostics, tests or test-only
 Python dependencies are packaged. This is a local candidate, not a release.
 
