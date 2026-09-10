@@ -11,11 +11,24 @@ function M.enable()
   end
   local fxVolume = speechVolume - 8
 
+  -- First launch takes a separate defaults path: FX=80 but samples=100.
+  local defaults = core.AOBScan("B8 50 00 00 00 A3 ? ? ? ? A3 ? ? ? ? B8 55 00 00 00 C7 05 ? ? ? ? 5A 00 00 00 A3 ? ? ? ? A3 ? ? ? ? C7 05 ? ? ? ? 64 00 00 00")
+  if core.readInteger(defaults + 11) ~= fxVolume
+      or core.readInteger(defaults + 42) ~= sampleVolume then
+    error("Audio Fixes: unsupported default-volume layout")
+  end
+
   core.insertCode(site + 19, 5, {
     0x50,                         -- push eax
     0xA1, {fxVolume},             -- mov eax, [saved FX volume]
     0xA3, {sampleVolume},         -- mov [sample volume], eax
     0x58,                         -- pop eax
+  })
+  core.insertCode(defaults + 40, 10, {
+    0x50,
+    0xA1, {fxVolume},
+    0xA3, {sampleVolume},
+    0x58,
   })
 end
 

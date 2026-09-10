@@ -19,7 +19,12 @@ def fixture():
     return (b'\xa1' + struct.pack('<I', DATA + 0x7c)
         + bytes.fromhex('56 55 6a 10 68') + struct.pack('<I', DATA + 0x4000)
         + b'\xa3' + struct.pack('<I', DATA + 0x80)
-        + b'\xa3' + struct.pack('<I', DATA + 0x3170) + b'\xe8')
+        + b'\xa3' + struct.pack('<I', DATA + 0x3170) + b'\xe8'
+        + bytes.fromhex('b8 50 00 00 00 a3') + struct.pack('<I', DATA+0x78)
+        + b'\xa3' + struct.pack('<I', DATA+0x74) + bytes.fromhex('b8 55 00 00 00 c7 05')
+        + struct.pack('<I', DATA+0x70) + bytes.fromhex('5a 00 00 00 a3')
+        + struct.pack('<I', DATA+0x7c) + b'\xa3' + struct.pack('<I', DATA+0x80)
+        + bytes.fromhex('c7 05') + struct.pack('<I',DATA+0x3170) + bytes.fromhex('64 00 00 00'))
 
 
 def install(code=None):
@@ -51,11 +56,12 @@ def install(code=None):
     return patches
 
 
-@pytest.mark.parametrize('fx', [0, 1, 50, 99, 100])
+@pytest.mark.parametrize('fx', [0, 1, 50, 80, 99, 100])
 @pytest.mark.parametrize('speech', [0, 37, 100])
-def test_saved_fx_not_speech_and_preserves_machine_state(fx, speech):
-    address, size, emitted = install()[0]
-    assert (address, size) == (SITE + 19, 5)
+@pytest.mark.parametrize('path', [0, 1])
+def test_fx_not_speech_and_preserves_machine_state(fx, speech, path):
+    address, size, emitted = install()[path]
+    assert (address, size) == ((SITE+19,5) if path == 0 else (SITE+65,10))
     uc = Uc(UC_ARCH_X86, UC_MODE_32)
     for base, length in [(SITE, 0x1000), (DATA, 0x5000), (CAVE, 0x1000), (STACK, 0x2000)]:
         uc.mem_map(base, length)
@@ -89,6 +95,13 @@ def test_unsupported_layout_fails_before_writing():
 def test_unrecognized_code_fails_before_writing():
     with pytest.raises(ValueError, match='AOB not found'):
         install(b'\x90' * 32)
+
+
+def test_unsupported_default_layout_fails_before_writing():
+    blob = bytearray(fixture())
+    struct.pack_into('<I', blob, 25+42, DATA+0x3174)
+    with pytest.raises(Exception, match='unsupported default-volume layout'):
+        install(bytes(blob))
 
 
 def test_disabled_option_and_repeated_enable():
