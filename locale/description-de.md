@@ -1,1 +1,1 @@
-Korrigiert die Effektlautstärke beim Start und den Videoton. Nutzt den vorhandenen FX-Regler.
+Korrigiert Ton beim Spielstart, in Videos und auf der Karte. Nutzt den vorhandenen FX-Regler.

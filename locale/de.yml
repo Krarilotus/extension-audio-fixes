@@ -3,3 +3,5 @@ startup_text: FX-Lautstärke beim Start
 startup_description: Verwendet die FX-Einstellung ab dem ersten Ton.
 video_text: FX-Lautstärke für Videos
 video_description: Wendet die FX-Einstellung auf Videoton an, auch während der Wiedergabe.
+positional_text: Positionsabhängiger Ton
+positional_description: Passt die Tonposition an Ansicht und Zoom an.

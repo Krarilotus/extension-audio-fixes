@@ -3,3 +3,5 @@ startup_text: 启动时的音效音量
 startup_description: 从第一个声音起应用音效音量设置。
 video_text: 视频音效音量
 video_description: 将音效音量设置应用于视频，播放时调整也会生效。
+positional_text: 位置音效
+positional_description: 使音效位置随视野和缩放正确调整。
