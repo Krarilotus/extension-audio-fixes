@@ -60,12 +60,18 @@ no new runtime dependency. At most two extra BinkSetVolume calls per FX setter
 event. Both emulation and a read-only inspection of the actual installed native
 FASM code confirm 34/55/105-byte trampolines (194 total). The allocations share
 the core allocator's code area; allocator page accounting is not yet measured.
-Runtime files including all nine locales total 8,428 bytes; the candidate ZIP is
-6,908 bytes before the shared startup-code cleanup is incorporated. All labels
+Runtime files including all nine locales total 8,381 bytes; the candidate ZIP is
+6,911 bytes. All labels
 resolve through the launcher's actual translation function. No tests, diagnostic
 code, Python dependencies or assets are packaged. No release was published.
 
-Remaining acceptance: native Extreme, natural AI/building trigger and timing,
-sound-off/reused-slot native stress, save/load and persistence compatibility,
-independent review. Multiplayer and replay have not been tested. Native test
-access is serialized with the Interface and Visual threads; this PR remains draft.
+Further native acceptance passed: the normal woodcutter building panel played its
+video at gain2200 with FX11, music10 and speech30. A normal UI save/load round trip
+restored the settlement and preserved those mixer values. The user confirmed the
+restart result and requested no additional audio testing.
+
+Limits: Wolf playback uses the native function fixture rather than a natural AI
+event. No frame-timing benchmark, native Extreme, native sound-off/reuse stress,
+multiplayer or replay acceptance is claimed. Sound-off/reuse is covered by the
+emitted-code tests. Independent review remains. No test diagnostics are packaged;
+the native diagnostic was removed after acceptance.
