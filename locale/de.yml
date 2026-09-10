@@ -1,3 +1,5 @@
 audio_fixes: Audiokorrekturen
 startup_text: FX-Lautstärke beim Start
 startup_description: Verwendet die FX-Einstellung ab dem ersten Ton.
+video_text: FX-Lautstärke für Videos
+video_description: Wendet die FX-Einstellung auf Videoton an, auch während der Wiedergabe.

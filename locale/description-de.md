@@ -1,1 +1,1 @@
-Korrigiert die Effektlautstärke beim Start. Nutzt den vorhandenen FX-Regler.
+Korrigiert die Effektlautstärke beim Start und den Videoton. Nutzt den vorhandenen FX-Regler.

@@ -1,1 +1,1 @@
-Javítja az effektek indításkori hangerejét a meglévő csúszkával.
+Javítja az effektek indításkori és a videók hangerejét a meglévő effektcsúszkával.

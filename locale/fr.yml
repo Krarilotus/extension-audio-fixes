@@ -1,3 +1,5 @@
 audio_fixes: Corrections audio
 startup_text: Volume des effets au démarrage
 startup_description: Applique le volume des effets dès le premier son.
+video_text: Volume des effets pour les vidéos
+video_description: Applique le volume des effets aux vidéos, même pendant la lecture.

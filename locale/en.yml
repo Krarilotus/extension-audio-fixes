@@ -1,3 +1,5 @@
 audio_fixes: Audio Fixes
 startup_text: FX volume at startup
 startup_description: Use the FX setting from the first sound.
+video_text: Video FX volume
+video_description: Apply the FX setting to video sound, including during playback.

@@ -9,3 +9,11 @@ options:
     url: audio-fixes.startup-sfx-volume
     contents:
       value: false
+  - name: video_fx_volume
+    category: ['{{audio_fixes}}']
+    text: '{{video_text}}'
+    description: '{{video_description}}'
+    display: Switch
+    url: audio-fixes.video-fx-volume
+    contents:
+      value: false
