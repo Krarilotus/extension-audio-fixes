@@ -19,6 +19,10 @@ Loaded Castle Builder `A Mighty Oasis.map` (SHA256
 `f6d54c03b019026b40c41b9def0e9467188353f1490efef505922b6d0f2733c2`).
 The original FX slider subsequently changed streams 1/2 and sample volume to
 12, then 24, leaving music=37 and speech=83 unchanged.
+Additional fresh native launches passed: FX=50/speech=83 produced first-sample
+master/effective volume 50; FX=100/speech=0 produced 100. Music remained 37.
+The patch and runtime files tested are those of commit 8ae3f7a; subsequent CI
+and validation documentation changes do not change these files.
 
 Test setup: isolated copied game and configpath/userdata; no replay installation
 changes. DirectDraw native state was checked; visual checks used existing
@@ -39,7 +43,13 @@ Allocation/page overhead comes from the existing UCP core allocator. Native
 wall-clock startup deltas are not yet measured; modal acknowledgement and capture
 timing must not be presented as patch overhead.
 
-Still pending: fresh native FX=50/100 and missing-config launches; restart after
-native slider persistence; save/load acceptance; native Extreme; direct audible
-output comparison, final package-size measurement and independent review.
+Package measurement: four runtime files total 1,549 bytes; a deterministic
+DEFLATE candidate ZIP is 1,275 bytes. No assets, diagnostics, tests or test-only
+Python dependencies are packaged. This is a local candidate, not a release.
+
+Still pending: missing-config launch; restart after native slider persistence;
+save/load acceptance; native Extreme; direct audible output comparison and
+independent review. Code inspection shows the missing-config branch retains
+native defaults (FX=80, sample master=100); this option currently corrects the
+saved-settings path only. Do not claim first-run default-volume consistency.
 No multiplayer/replay compatibility claim is made from these tests.
