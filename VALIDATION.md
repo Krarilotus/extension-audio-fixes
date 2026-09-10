@@ -5,7 +5,8 @@ Original SHC 1.41 Latin executable SHA256:
 Extreme executable SHA256:
 `55648e6b05d67d37a5773fe699bbb17a2d6ad4de1bb9dbded9a21caef82bd7fb`.
 
-The signature occurs once in each executable, at 0x00496075 / 0x004961DE.
+The saved-settings signature occurs once in each executable, at 0x00496075 /
+0x004961DE; the default-settings signature at 0x0049637B / 0x004964E6.
 Original assembly and existing OpenSHC `readUserConfig` agree: speech is loaded,
 mirrored to stream 4, then incorrectly stored as sample volume. The original
 FX slider sets streams 1/2 and samples; speech sets streams 3/4.
@@ -21,8 +22,19 @@ The original FX slider subsequently changed streams 1/2 and sample volume to
 12, then 24, leaving music=37 and speech=83 unchanged.
 Additional fresh native launches passed: FX=50/speech=83 produced first-sample
 master/effective volume 50; FX=100/speech=0 produced 100. Music remained 37.
-The patch and runtime files tested are those of commit 8ae3f7a; subsequent CI
-and validation documentation changes do not change these files.
+Those saved-setting matrix checks used runtime commit 8ae3f7a.
+
+Further end-to-end testing found the separate no-config path sets FX=80 but
+sample master=100. Original assembly and native startup both confirmed it. This
+revision also redirects that default store to the FX value, preserving the game's
+default stream values. Native fixed-default acceptance is pending.
+
+The user then set music=10, FX=11, speech=30 in the native UI and requested a
+restart without touching the sliders. With this revision and the video correction,
+fresh startup produced streams [10,11,11,30,30], sample master11, first-sample
+effective11. The config SHA256 stayed
+`c00783a5c2398ec44daaef89dc19e4f402f90e978940b8e86d3c47679233f511`.
+No slider was touched after restart. The user reported the audible result working.
 
 Test setup: isolated copied game and configpath/userdata; no replay installation
 changes. DirectDraw native state was checked; visual checks used existing
@@ -30,26 +42,26 @@ Graphics API Replacer 1.3.0 and winProcHandler 0.2.0. No UI controls are added.
 An obsolete Windows missing-DLL dialog overlaps part of the captured window;
 the sound options and all three existing sliders remained inspectable.
 
-Automated: `python -m pytest -q` executes 18 tests. Emitted x86 is executed with
+Automated: `python -m pytest -q` executes 40 tests. Emitted x86 is executed with
 Unicorn for independent FX/speech combinations (including mute/full), checking
 all general registers, ESP, flags, and unrelated channel values. Invalid layout,
 unrecognized code, disabled option and repeat activation are covered. These are
 emulated tests, not native game compatibility claims.
 
-Cost: one existing 5-byte store is redirected to a 17-byte trampoline. The
-additional startup instructions are two jumps, push/pop EAX and one memory load;
+Cost: the saved/default stores use two 17-byte trampolines, verified by reading
+native installed code. Only one path runs per config load. The additional executed
+startup instructions are two jumps, push/pop EAX and one memory load;
 there is no per-sound/per-frame overhead, new persistent state or dependency.
 Allocation/page overhead comes from the existing UCP core allocator. Native
 wall-clock startup deltas are not yet measured; modal acknowledgement and capture
 timing must not be presented as patch overhead.
 
-Package measurement: four runtime files total 1,549 bytes; a deterministic
-DEFLATE candidate ZIP is 1,275 bytes. No assets, diagnostics, tests or test-only
+Package measurement will be refreshed for this default-path revision. The prior
+saved-only candidate contained four runtime files, 1,549 bytes / 1,275 ZIP bytes.
+No assets, diagnostics, tests or test-only
 Python dependencies are packaged. This is a local candidate, not a release.
 
-Still pending: missing-config launch; restart after native slider persistence;
-save/load acceptance; native Extreme; direct audible output comparison and
-independent review. Code inspection shows the missing-config branch retains
-native defaults (FX=80, sample master=100); this option currently corrects the
-saved-settings path only. Do not claim first-run default-volume consistency.
+Still pending: fixed-default native launch, save/load acceptance, native Extreme
+and independent review. User-driven slider persistence and the requested audible
+restart comparison have passed as described above.
 No multiplayer/replay compatibility claim is made from these tests.
