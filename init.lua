@@ -9,6 +9,9 @@ return {
     if config["video-fx-volume"] == true then
       require("bink-volume").enable()
     end
+    if config["positional-audio"] == true then
+      require("positional-audio").enable()
+    end
     enabled = true
   end,
   disable = function()

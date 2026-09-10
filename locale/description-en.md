@@ -1,1 +1,1 @@
-Fixes startup sound-effects volume and video volume. Uses the existing FX slider.
+Fixes startup, video and positional audio. Uses the existing FX slider.

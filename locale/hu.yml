@@ -3,3 +3,5 @@ startup_text: Effekthangerő indításkor
 startup_description: Az első hangtól alkalmazza az effekthangerőt.
 video_text: Videók effekthangereje
 video_description: Az effekthangerőt a videókra is alkalmazza, lejátszás közben is.
+positional_text: Térbeli hangok
+positional_description: A hangok helyzetét a nézethez és a nagyításhoz igazítja.

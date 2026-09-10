@@ -1,1 +1,1 @@
-Başlangıçtaki efekt sesini ve video sesini mevcut efekt sesi kaydırıcısıyla düzeltir.
+Başlangıç, video ve konumsal ses sorunlarını düzeltir. Mevcut FX kaydırıcısını kullanır.

@@ -1,1 +1,1 @@
-Corrige le volume des effets au démarrage et celui des vidéos avec le réglage des effets existant.
+Corrige le son au démarrage, dans les vidéos et sur la carte. Utilise le curseur FX existant.

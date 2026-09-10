@@ -1,1 +1,1 @@
-Javítja az effektek indításkori és a videók hangerejét a meglévő effektcsúszkával.
+Javítja az induláskori, a videós és a térbeli hangokat. A meglévő FX-csúszkát használja.

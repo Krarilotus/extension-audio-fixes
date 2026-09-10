@@ -17,3 +17,11 @@ options:
     url: audio-fixes.video-fx-volume
     contents:
       value: false
+  - name: positional_audio
+    category: ['{{audio_fixes}}']
+    text: '{{positional_text}}'
+    description: '{{positional_description}}'
+    display: Switch
+    url: audio-fixes.positional-audio
+    contents:
+      value: false
