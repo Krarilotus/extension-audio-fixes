@@ -18,18 +18,14 @@ function M.enable()
     error("Audio Fixes: unsupported default-volume layout")
   end
 
-  core.insertCode(site + 19, 5, {
+  local copyFX = {
     0x50,                         -- push eax
     0xA1, {fxVolume},             -- mov eax, [saved FX volume]
     0xA3, {sampleVolume},         -- mov [sample volume], eax
     0x58,                         -- pop eax
-  })
-  core.insertCode(defaults + 40, 10, {
-    0x50,
-    0xA1, {fxVolume},
-    0xA3, {sampleVolume},
-    0x58,
-  })
+  }
+  core.insertCode(site + 19, 5, copyFX)
+  core.insertCode(defaults + 40, 10, copyFX)
 end
 
 return M
