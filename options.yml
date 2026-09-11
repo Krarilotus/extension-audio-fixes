@@ -8,7 +8,7 @@ options:
     display: Switch
     url: audio-fixes.startup-sfx-volume
     contents:
-      value: false
+      value: true
   - name: video_fx_volume
     category: ['{{audio_fixes}}']
     text: '{{video_text}}'
@@ -16,7 +16,7 @@ options:
     display: Switch
     url: audio-fixes.video-fx-volume
     contents:
-      value: false
+      value: true
   - name: positional_audio
     category: ['{{audio_fixes}}']
     text: '{{positional_text}}'
@@ -24,4 +24,4 @@ options:
     display: Switch
     url: audio-fixes.positional-audio
     contents:
-      value: false
+      value: true
