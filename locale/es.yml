@@ -1,7 +1,7 @@
-audio_fixes: Correcciones de audio
+bugfixes: Bugfixes
 startup_text: Volumen de efectos al iniciar
-startup_description: Aplica el volumen de efectos desde el primer sonido.
+startup_description: Corrige los efectos de sonido que ignoran el volumen FX guardado hasta que se mueve el control.
 video_text: Volumen de efectos en vídeos
-video_description: Aplica el volumen de efectos a los vídeos, también durante la reproducción.
+video_description: Corrige el audio de los vídeos que ignora el volumen FX y el silencio.
 positional_text: Audio posicional
-positional_description: Ajusta la posición de los sonidos a la vista y al zoom.
+positional_description: Corrige los sonidos cercanos que se cortan a resoluciones altas o al alejar la vista.
