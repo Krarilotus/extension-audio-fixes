@@ -5,3 +5,5 @@ video_text: Volume des effets pour les vidéos
 video_description: Corrige le son des vidéos qui ignore le volume FX et la mise en sourdine.
 positional_text: Audio positionnel
 positional_description: Corrige les sons proches qui se coupent à haute résolution ou lorsque la vue est dézoomée.
+tags.sounds: Sons
+tags.bugfixes: Corrections
