@@ -5,3 +5,5 @@ video_text: Video FX volume
 video_description: Apply the FX setting to video sound, including during playback.
 positional_text: Positional audio
 positional_description: Keeps positional sounds aligned with the view and zoom.
+tags.sounds: Sounds
+tags.bugfixes: Bug fixes

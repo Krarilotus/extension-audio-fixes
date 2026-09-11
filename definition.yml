@@ -9,8 +9,3 @@ meta:
 tags:
 - sounds
 - bugfixes
-capabilities:
-  files: false
-  code: true
-  configuration: false
-  options: true

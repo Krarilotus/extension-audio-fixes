@@ -5,3 +5,5 @@ video_text: صدای جلوه‌ها در ویدیو
 video_description: بلندی صدای جلوه‌ها را به ویدیو اعمال می‌کند، حتی هنگام پخش.
 positional_text: صدای مکانی
 positional_description: موقعیت صداها را با نمای بازی و بزرگ‌نمایی هماهنگ می‌کند.
+tags.sounds: صداها
+tags.bugfixes: رفع اشکال

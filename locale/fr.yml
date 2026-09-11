@@ -5,3 +5,5 @@ video_text: Volume des effets pour les vidéos
 video_description: Applique le volume des effets aux vidéos, même pendant la lecture.
 positional_text: Audio positionnel
 positional_description: Adapte la position des sons à la vue et au zoom.
+tags.sounds: Sons
+tags.bugfixes: Corrections

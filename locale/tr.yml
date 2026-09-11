@@ -5,3 +5,5 @@ video_text: Videoların efekt sesi
 video_description: Efekt ses düzeyini oynatma sırasında da videolara uygular.
 positional_text: Konumsal ses
 positional_description: Seslerin konumunu görünüme ve yakınlaştırmaya uyarlar.
+tags.sounds: Sesler
+tags.bugfixes: Hata düzeltmeleri
