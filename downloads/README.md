@@ -1,5 +1,9 @@
 # Audio Fixes test download
 
+**Audio Fixes 0.1.1 is now published. Install it through the UCP 3.0.7 launcher's
+Content tab to obtain the signed module.** The unsigned archives below are kept
+for reproducing earlier tests.
+
 Copy **audio-fixes-0.1.1.zip** into `<game>\ucp\modules\` without extracting it.
 Use a separate UCP 3.0.7 Developer installation: this test module is unsigned.
 Reopen the launcher, select Audio Fixes 0.1.1, apply and restart the game.
@@ -18,4 +22,4 @@ SHA256: 4c43c490992f233646f50fd305eddf8289e0a5c5e7146b9a2a06c7ff69526b63
 
 Feedback and testing guidance: https://github.com/UnofficialCrusaderPatch/UCP3-extensions-store/pull/29
 
-Test download only. The store PR remains held from merge/publication.
+The published store package and signature are separate from these historical unsigned test archives.
