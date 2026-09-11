@@ -10,10 +10,11 @@ funnel filter includes modules. Move any previously extracted audio-fixes-0.1.0
 folder outside modules first, since Developer mode prefers folders over ZIPs.
 
 The ZIP is the official packager output for source
-669390229a0ea765acffd988b65cfb15f2569961. Of the 24 runtime/localization files,
-only options.yml changed to enable the three defaults; Lua and translations are
-byte-identical to the tested candidate. SHA256:
-246f8ddf9355a2e0e71683ab3b20c95f795f4e30ce126c36ebd4532fbfcafa2c
+f71e48f0afe2f80fae8b489c586f3d11df62d8fb. Of the 24 runtime/localization files,
+options.yml and locale YAML now expose one-sentence explanations in the existing
+Bugfixes category; expand each switch to read them. Lua files are byte-identical
+to the tested candidate. SHA256:
+595f03a45f1fc5ab43922a8ba4c26b005257e6f6acdcd6709d9ac1bbe6cd71bb
 
 The older `audio-fixes-0.1.0-test-809c374.zip` is superseded: its filename and
 wrapper folder are unsuitable for direct ZIP installation.
