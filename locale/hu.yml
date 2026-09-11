@@ -1,9 +1,9 @@
-audio_fixes: Hangjavítások
+bugfixes: Bugfixes
 startup_text: Effekthangerő indításkor
-startup_description: Az első hangtól alkalmazza az effekthangerőt.
+startup_description: Javítja, hogy a hangeffektek csak a csúszka mozgatása után vegyék figyelembe a mentett FX-hangerőt.
 video_text: Videók effekthangereje
-video_description: Az effekthangerőt a videókra is alkalmazza, lejátszás közben is.
+video_description: Javítja, hogy a videók hangja figyelmen kívül hagyja az FX-hangerőt és a némítást.
 positional_text: Térbeli hangok
-positional_description: A hangok helyzetét a nézethez és a nagyításhoz igazítja.
+positional_description: Javítja a közeli hangok elnémulását nagyobb felbontásnál vagy a nézet távolításakor.
 tags.sounds: Hangok
 tags.bugfixes: Hibajavítások

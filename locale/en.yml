@@ -1,9 +1,9 @@
-audio_fixes: Audio Fixes
+bugfixes: Bugfixes
 startup_text: FX volume at startup
-startup_description: Use the FX setting from the first sound.
+startup_description: Fixes sound effects ignoring the saved FX volume until the slider is moved.
 video_text: Video FX volume
-video_description: Apply the FX setting to video sound, including during playback.
+video_description: Fixes video sound ignoring the FX volume and mute setting.
 positional_text: Positional audio
-positional_description: Keeps positional sounds aligned with the view and zoom.
+positional_description: Fixes nearby sounds cutting out at larger resolutions or when zoomed out.
 tags.sounds: Sounds
 tags.bugfixes: Bug fixes

@@ -1,9 +1,9 @@
-audio_fixes: Ses Düzeltmeleri
+bugfixes: Bugfixes
 startup_text: Başlangıçta efekt sesi
-startup_description: Efekt ses düzeyini ilk sesten itibaren uygular.
+startup_description: Ses efektlerinin, kaydırıcı hareket ettirilene kadar kayıtlı FX ses düzeyini yok saymasını düzeltir.
 video_text: Videoların efekt sesi
-video_description: Efekt ses düzeyini oynatma sırasında da videolara uygular.
+video_description: Video sesinin FX ses düzeyini ve sessize alma ayarını yok saymasını düzeltir.
 positional_text: Konumsal ses
-positional_description: Seslerin konumunu görünüme ve yakınlaştırmaya uyarlar.
+positional_description: Yüksek çözünürlükte veya uzaklaştırılmış görünümde yakındaki seslerin kesilmesini düzeltir.
 tags.sounds: Sesler
 tags.bugfixes: Hata düzeltmeleri
