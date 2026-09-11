@@ -1,7 +1,7 @@
-audio_fixes: Audiokorrekturen
+bugfixes: Bugfixes
 startup_text: FX-Lautstärke beim Start
-startup_description: Verwendet die FX-Einstellung ab dem ersten Ton.
+startup_description: Behebt, dass Soundeffekte die gespeicherte FX-Lautstärke erst nach Bewegen des Reglers übernehmen.
 video_text: FX-Lautstärke für Videos
-video_description: Wendet die FX-Einstellung auf Videoton an, auch während der Wiedergabe.
+video_description: Behebt, dass Videoton die FX-Lautstärke und Stummschaltung ignoriert.
 positional_text: Positionsabhängiger Ton
-positional_description: Passt die Tonposition an Ansicht und Zoom an.
+positional_description: Behebt, dass nahe Geräusche bei höheren Auflösungen oder beim Herauszoomen verstummen.
