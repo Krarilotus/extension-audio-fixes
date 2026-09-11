@@ -2,10 +2,14 @@
 
 Fixes startup, video and positional audio. Uses the existing FX slider.
 
-Enable the desired fixes and restart the game. All three options default to off.
+Add Audio Fixes to your configuration, apply and restart the game. All three fixes
+default to on; each can be disabled individually. Previously saved off settings
+remain off, so enable those switches when updating an existing configuration.
 Module text supports all nine UCP launcher languages.
 
-Install the runtime files and `locale` folder in `ucp/modules/audio-fixes-0.1.0`.
+Copy `audio-fixes-0.1.0.zip` into `ucp/modules` without extracting it.
+Unsigned test packages require UCP 3.0.7 Developer. In the launcher's Content tab,
+turn off the globe filter to show installed/local content, or use Extensions.
 See [startup](VALIDATION.md), [video](VALIDATION-R012.md) and
 [positional audio validation](VALIDATION-R011.md)
 for tested behavior and compatibility limits. No release has been published.
