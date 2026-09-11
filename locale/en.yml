@@ -5,3 +5,5 @@ video_text: Video FX volume
 video_description: Fixes video sound ignoring the FX volume and mute setting.
 positional_text: Positional audio
 positional_description: Fixes nearby sounds cutting out at larger resolutions or when zoomed out.
+tags.sounds: Sounds
+tags.bugfixes: Bug fixes

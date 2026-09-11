@@ -5,3 +5,5 @@ video_text: 视频音效音量
 video_description: 修复视频声音忽略音效音量和静音设置的问题。
 positional_text: 位置音效
 positional_description: 修复高分辨率或缩小视野时附近声音中断的问题。
+tags.sounds: 音效
+tags.bugfixes: 错误修复

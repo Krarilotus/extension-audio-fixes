@@ -5,3 +5,5 @@ video_text: Videoların efekt sesi
 video_description: Video sesinin FX ses düzeyini ve sessize alma ayarını yok saymasını düzeltir.
 positional_text: Konumsal ses
 positional_description: Yüksek çözünürlükte veya uzaklaştırılmış görünümde yakındaki seslerin kesilmesini düzeltir.
+tags.sounds: Sesler
+tags.bugfixes: Hata düzeltmeleri

@@ -5,3 +5,5 @@ video_text: Videók effekthangereje
 video_description: Javítja, hogy a videók hangja figyelmen kívül hagyja az FX-hangerőt és a némítást.
 positional_text: Térbeli hangok
 positional_description: Javítja a közeli hangok elnémulását nagyobb felbontásnál vagy a nézet távolításakor.
+tags.sounds: Hangok
+tags.bugfixes: Hibajavítások
