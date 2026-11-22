@@ -1,3 +1,3 @@
 修复启动、视频和位置音效。使用现有的音效音量滑块。
 
-All three fixes are off by default. The "UCP3 Fixes" plugin turns them on; you can also switch each one on here.
+这三项修复默认均处于关闭状态。"UCP3 Fixes" 插件会将它们开启；你也可以在这里逐项开启。

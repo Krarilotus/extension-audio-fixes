@@ -1,3 +1,3 @@
 Corrige le son au démarrage, dans les vidéos et sur la carte. Utilise le curseur FX existant.
 
-All three fixes are off by default. The "UCP3 Fixes" plugin turns them on; you can also switch each one on here.
+Les trois correctifs sont désactivés par défaut. Le plugin "UCP3 Fixes" les active ; vous pouvez aussi activer chacun d’eux ici.
