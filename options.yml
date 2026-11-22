@@ -8,7 +8,7 @@ options:
     display: UCP2Switch
     url: audio-fixes.startup-sfx-volume
     contents:
-      value: true
+      value: false
   - name: video_fx_volume
     category: ['{{bugfixes}}']
     header: '{{video_text}}'
@@ -16,7 +16,7 @@ options:
     display: UCP2Switch
     url: audio-fixes.video-fx-volume
     contents:
-      value: true
+      value: false
   - name: positional_audio
     category: ['{{bugfixes}}']
     header: '{{positional_text}}'
@@ -24,4 +24,4 @@ options:
     display: UCP2Switch
     url: audio-fixes.positional-audio
     contents:
-      value: true
+      value: false
