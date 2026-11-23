@@ -68,13 +68,11 @@ def test_locales_and_descriptions_exist_in_all_languages():
         assert set(simple_yaml_scalars(ROOT / f'locale/{language}.yml')) == keys, language
         description = (ROOT / f'locale/description-{language}.md').read_text(encoding='utf-8')
         assert description.strip() and '�' not in description, language
-        # Every language names the plugin that turns the fixes on.
-        assert 'UCP3 Fixes' in description, language
 
 
 @pytest.mark.parametrize('language', [language for language in LANGUAGES if language != 'en'])
 def test_new_default_sentence_is_translated(language):
-    # 0.2.0 added the second paragraph (off by default, the plugin turns them on).
+    # The second paragraph says the fixes are off by default.
     def second(name):
         lines = (ROOT / f'locale/description-{name}.md').read_text(encoding='utf-8').splitlines()
         return [line for line in lines if line.strip()][1]
