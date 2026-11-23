@@ -2,18 +2,17 @@
 
 Fixes startup, video and positional audio. Uses the existing FX slider.
 
-Version 0.2.0 ships the game's original behaviour: all three fixes are off by
-default, so adding the module alone changes nothing. The "UCP3 Fixes" plugin
-turns all three on; you can also switch each one on yourself under Bugfixes.
-Values you saved in a configuration stay as they are. If you added an earlier
-version on its own and update it, switch the fixes you want back on (or use the
-"UCP3 Fixes" plugin). Module text supports all nine UCP launcher languages.
+Add Audio Fixes to your configuration, switch on the fixes you want under
+Bugfixes, apply and restart the game. All three are off by default; the
+"UCP3 Fixes" plugin turns them on. Values explicitly saved in a configuration stay
+as they are; if you relied on the earlier defaults, check the switches after
+updating. Module text supports all nine UCP launcher languages.
 
-| Option | URL | Default |
-|---|---|---|
-| FX volume at startup | `audio-fixes.startup-sfx-volume` | off |
-| Video FX volume | `audio-fixes.video-fx-volume` | off |
-| Positional audio | `audio-fixes.positional-audio` | off |
+| Option | URL |
+|---|---|
+| FX volume at startup | `audio-fixes.startup-sfx-volume` |
+| Video FX volume | `audio-fixes.video-fx-volume` |
+| Positional audio | `audio-fixes.positional-audio` |
 
 Install Audio Fixes through the UCP 3.0.7 launcher's Content tab; it installs
 the signed module for the regular framework build. Include modules in the filter
